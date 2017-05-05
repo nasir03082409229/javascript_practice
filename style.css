@@ -1,0 +1,20 @@
+*{
+  text-align: center;
+  /*background-color: ;*/
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+button{
+  text-align:  center;
+}
+input{
+  font-size:20px; 
+  
+  width: 50%;
+  height: 25px;
+}
+.btn{
+  height: 30px;
+  
+  
+}
