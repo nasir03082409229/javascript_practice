@@ -1,0 +1,96 @@
+AirForShare.comShare instantly between devices connected to one networkYour stuff is available for 30 mins since last access
+FeedbackHow it worksRefresh clip
+TextFiles
+
+
+
+var num1;
+var num2;
+var operator;
+var screen = document.getElementById('screen');
+
+function assignNum(num) {
+    if (operator === undefined) {
+        if (num1 === undefined) {
+            num1 = num.toString();
+        }
+        else {
+            num1 = num1 + num.toString();
+        }
+        screen.innerHTML = num1;
+    }
+    else {
+        if (num2 === undefined) {
+            num2 = num.toString();
+        }
+        else {
+            num2 = num2 + num.toString();
+        }
+        screen.innerHTML = num2;
+    }
+}
+
+function assignOperator(oper) {
+    operator = oper;
+}
+
+function calculate() {
+    var result;
+    if (operator === '+') {
+        result = Number(num1) + Number(num2);
+    }
+    else if (operator === '-') {
+        result = Number(num1) - Number(num2);
+    }
+    else if (operator === '*') {
+        result = Number(num1) * Number(num2);
+    }
+    else if (operator === '/') {
+        result = Number(num1) / Number(num2);
+    }
+
+    screen.innerHTML = result;
+
+    operator = undefined;
+    num1 = undefined;
+    num2 = undefined;
+}
+
+
+/**********************************HTML************************************/
+
+    <div id="screen">0</div>
+    <button onClick='assignNum(7)'>7</button>
+    <button onClick='assignNum(8)'>8</button>
+    <button onClick='assignNum(9)'>9</button>
+    <button onClick='assignOperator("/")'>&divide;</button>
+    <br>
+    <button onClick='assignNum(4)'>4</button>
+    <button onClick='assignNum(5)'>5</button>
+    <button onClick='assignNum(6)'>6</button>
+    <button onClick='assignOperator("*")'>x</button>
+    <br>
+    <button onClick='assignNum(1)'>1</button>
+    <button onClick='assignNum(2)'>2</button>
+    <button onClick='assignNum(3)'>3</button>
+    <button onClick='assignOperator("-")'>-</button>
+    <br>
+    <button onClick='assignNum(".")'> . </button>
+    <button onClick='assignNum(0)'>0</button>
+    <button onClick='calculate()'>=</button>
+    <button onClick='assignOperator("+")'>+</button>
+
+
+
+
+
+Accept terms of AirForShare
+Cancel
+ 
+Upload file
+up to 5Mb Choose Files
+twitterfacebook
+iOS
+Windows Phone
+© 2011-2017 AirForShare.com
+Made by BirdsCorp.com

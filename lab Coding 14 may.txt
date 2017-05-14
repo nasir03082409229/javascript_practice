@@ -1,0 +1,151 @@
+// Muhammad Nasir
+// Roll no : 47
+// Orange Section
+// Batch 4.1
+
+
+// Onclick
+
+// function log()
+// {
+//     console.log("hello World");
+// }
+
+// var count  = 0;
+// var screen =  document.getElementById("a");
+// function increment()
+// {
+//     screen.innerHTML= ++count;
+// }
+// function decrement()
+// {
+//     screen.innerHTML= --count;
+// }
+// function reset()
+// {
+//     count = 0;
+//     screen.innerHTML = count;
+// }
+// function cal(a)
+// {
+//     console.log(a);
+// }
+
+
+
+
+// var ans = document.getElementById("ans");
+// function add()
+// {
+//     var num1 = document.getElementById("num1").value;
+//     var num2 = document.getElementById("num2").value;
+//      num1 = Number(num1);
+//     num2 = Number(num2);
+//     ans.value = (num1+num2);
+// }
+// function sub()
+// {
+//     var num1 = document.getElementById("num1").value;
+//     var num2 = document.getElementById("num2").value;
+//      num1 = Number(num1);
+//     num2 = Number(num2);
+//     ans.value = (num1-num2);
+// }
+// function mul()
+// {
+//     var num1 = document.getElementById("num1").value;
+//     var num2 = document.getElementById("num2").value;
+//      num1 = Number(num1);
+//     num2 = Number(num2);
+//     ans.value = (num1*num2);
+// }
+// function divide()
+// {
+//     var num1 = document.getElementById("num1").value;
+//     var num2 = document.getElementById("num2").value;
+//      num1 = Number(num1);
+//     num2 = Number(num2);
+//     ans.value = (num1/num2).toFixed(2);
+// }
+// function mod()
+// {
+//     var num1 = document.getElementById("num1").value;
+//     var num2 = document.getElementById("num2").value;
+//      num1 = Number(num1);
+//     num2 = Number(num2);
+//     ans.value = (num1%num2);
+// }
+
+// function square()
+// {
+//     var num1 = document.getElementById("num1").value;
+//      num1 = Number(num1);
+//     ans.value = (num1*num1);
+// }
+// function squareRoot()
+// {
+//     var num1 = document.getElementById("num1").value;
+//      num1 = Number(num1);
+//     ans.value = (Math.sqrt(num1).toFixed(2));
+// }
+
+
+
+
+
+
+// calculator 
+
+var num1, num2, op;
+
+function assignNum(num)
+{
+    if(op ==undefined)
+    {
+        if(num1 == undefined)
+        {
+            num1 = num;
+            document.getElementById("ans").innerHTML =num1;
+        }
+        else
+        {
+            num2 = num;
+            document.getElementById("ans").innerHTML +=num2;
+        }
+    }
+}
+   
+
+function assignOp(ope)
+{
+    
+    op = ope;
+    document.getElementById("ans").innerHTML +=ope;;
+}
+function cal()
+{
+   var ans = document.getElementById("answer") ;
+    
+    if(op=='+')
+    {
+        ans.value = (num1+num1);
+    }
+    if(op=='-')
+    {
+        ans.value = (num1-num1);
+    }
+    if(op=='*')
+    {
+        ans.value = (num1*num1);
+    }
+    if(op=='/')
+    {
+        asn.value = (num1/num1);
+    }
+   num1 = undefined;
+   num2 = undefined;
+   op  = undefined;
+
+}
+
+
