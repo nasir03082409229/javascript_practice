@@ -1,0 +1,112 @@
+// // var person  = 
+// // {
+// //     name : "Nasir",
+// //     number : 900909,
+// // }
+// // console.log(person);
+// // person.age = 19;
+// // console.log(person.age,"last");
+
+// // var a = document.getElementById("roll");
+// function add() 
+// {
+// localStorage.setItem("Roll",a.value);    
+// }
+// function get()
+// {
+//     console.log(localStorage.getItem("Roll"));    
+// }
+
+var id = document.getElementById("id");
+var pass = document.getElementById("pass");
+var auth = document.getElementById("auth");
+
+// function add() 
+// {
+//     var user = 
+//     {
+//         id : id.value,
+//         password : pass.value
+//     }
+//     localStorage.setItem("Users",JSON.stringify(user));    
+// }
+// function get(){
+//     var u = JSON.parse(localStorage.getItem("Users0"));
+//     id.value = u.id;
+//     pass.value = u.password;
+// }
+
+// Sign Up 
+
+function add() {
+    var allUser = localStorage.getItem('user');
+    var existUser = false;
+    if(allUser === null)
+    {
+        allUser = [];
+    }
+    else
+    {
+        allUser = JSON.parse(allUser);
+        console.log(allUser);
+    }
+    var user = {
+        email : id.value,
+        password : pass.value
+    }
+    for (var i = 0; i < allUser.length; i++) {
+            if(allUser[i].email == id.value)
+            {
+                existUser =true;
+            }        
+    }
+    if(existUser)
+    {
+        auth.innerHTML = "Email already Exist";
+    }else
+    {
+        allUser.push(user);
+        allUser = JSON.stringify(allUser);
+        localStorage.setItem("user",allUser);
+        id.value = "";
+        pass.value = "";
+        alert("Sign Up Done ");
+    }
+    
+}
+
+
+
+function login()
+{
+  var allUser = localStorage.getItem('user');
+    var login = false;
+    if(allUser === null)
+    {
+        allUser = [];
+    }
+    else
+    {
+        allUser = JSON.parse(allUser);
+    }
+    var user = {
+        email : id.value,
+        password : pass.value
+    }
+    for (var i = 0; i < allUser.length; i++) {
+            if(allUser[i].email == id.value)
+            {
+                login =true;
+            }        
+    }
+    if(login)
+    {
+        auth.innerHTML = "login Successfully";
+    }else
+    {
+        auth.innerHTML = "login faild";
+        
+    }
+   
+
+}
