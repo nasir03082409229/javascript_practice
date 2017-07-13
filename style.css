@@ -1,20 +1,37 @@
-*{
-  text-align: center;
-  /*background-color: ;*/
-  font-family: Arial, Helvetica, sans-serif;
+#container{
+    width: 90%;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+}
+
+img{
+    width: 33.3%;
+    height: 100%;
+    position: absolute;
+}
+
+input{
+    position: relative;
+    top: 50%;
+    background-color: transparent;
+}
+#b{
+    display: block;
+    float: right;
+}
+
+/*sd*/
+/*input
+{
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    position: relative;
+    top: 135px;
 
 }
-button{
-  text-align:  center;
-}
-input{
-  font-size:20px; 
-  
-  width: 50%;
-  height: 25px;
-}
-.btn{
-  height: 30px;
-  
-  
-}
+#b{
+    left: 890px;
+}*/
