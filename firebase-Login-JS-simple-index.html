@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="username">
+        <input type="text" id="pass">
+        <input type="button" value="Sign UP" onclick="signUp()">
+        <input type="button" value="Login" onclick="login()">
+
+    </form>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDxlTkK99FRCRsLsZqsfGdyqjRYzy6Yq5w",
+            authDomain: "login-8ecef.firebaseapp.com",
+            databaseURL: "https://login-8ecef.firebaseio.com",
+            projectId: "login-8ecef",
+            storageBucket: "login-8ecef.appspot.com",
+            messagingSenderId: "471481327050"
+        };
+        var app = firebase.initializeApp(config);
+
+</script>
+<script src="main.js"></script>
+</body>
+
+</html>
