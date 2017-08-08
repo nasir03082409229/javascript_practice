@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="todo">
+                <input type="text" placeholder="Todo Item" id="todo">
+                <input type="button" value="Add" onClick="addTo()">
+            </label>
+    </form>
+    <ul id="list">
+
+    </ul>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBsSdFMqLJGhqz87ZuY0Ko-1P-mOtTasBw",
+            authDomain: "todoapplication-750a5.firebaseapp.com",
+            databaseURL: "https://todoapplication-750a5.firebaseio.com",
+            projectId: "todoapplication-750a5",
+            storageBucket: "",
+            messagingSenderId: "16243135195"
+        };
+        var app = firebase.initializeApp(config);
+
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
